@@ -23,6 +23,7 @@ public class AdminServiceImpl implements AdminService {
 	public Admin login(String name, String password) {
 		Admin loginAdmin = adminDao.login(name, password);
         System.out.println("冲突dev edit");
+		System.out.println("冲突idea edit");
 		return loginAdmin;
 	}
 	
