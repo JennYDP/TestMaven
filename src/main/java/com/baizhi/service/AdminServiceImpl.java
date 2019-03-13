@@ -37,7 +37,7 @@ public class AdminServiceImpl implements AdminService {
 	@Transactional(propagation=Propagation.SUPPORTS)
 	public Admin findName(String name) {
 		Admin queryName = adminDao.queryName(name);
-		
+		System.out.println("edit Girhub");
 		return queryName;
 	}
 
