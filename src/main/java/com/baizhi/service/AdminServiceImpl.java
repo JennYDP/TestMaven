@@ -22,7 +22,7 @@ public class AdminServiceImpl implements AdminService {
 	@Transactional(propagation=Propagation.SUPPORTS)
 	public Admin login(String name, String password) {
 		Admin loginAdmin = adminDao.login(name, password);
-		
+		System.out.println("冲突github edit")
 		return loginAdmin;
 	}
 	
