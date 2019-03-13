@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.AdminDao">
+
+	<select id="queryAll" resultType="Admin">
+		select id,name,password,level from z_admin
+	</select>
+
+
+	<select id="queryName" resultType="Admin">
+		select id,name,password,level from z_admin
+		where name=#{name}
+	</select>
+	
+	<select id="login" resultType="Admin">
+		select id,name,password,level from z_admin
+		where name=#{name} and password = #{password}
+	</select>
+
+	<insert id="insertItem">
+		insert into z_admin values (uuid(),#{name},#{password},#{level})	
+	</insert>
+
+	
+
+	<update id="updateItem">
+		UPDATE z_admin 
+		SET name=#{name},password=#{password},level=#{level}
+		where id=#{id}
+	</update>
+	
+	<update id="updateLevel">
+		UPDATE z_admin SET level=#{level}
+		where id=#{id}
+	</update> 
+</mapper>
