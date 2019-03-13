@@ -24,7 +24,7 @@ public class AdminServiceImpl implements AdminService {
 		Admin loginAdmin = adminDao.login(name, password);
         System.out.println("冲突dev edit");
 		System.out.println("冲突idea edit");
-		System.out.println("冲突github edit")
+		System.out.println("冲突github edit");
 		return loginAdmin;
 	}
 	
